@@ -1,0 +1,18 @@
+stages:
+  - test
+
+#
+# Test Stage during merge requests
+#
+test:
+  stage: test
+  only:
+  - merge_requests
+
+  image: adammaus/run-angular18-karma-in-docker
+
+  # Run script to test app
+  script:
+    - cd app
+    - npm install
+    - ng test
