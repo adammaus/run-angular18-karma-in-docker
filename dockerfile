@@ -46,7 +46,10 @@ RUN apt install -y ./google-chrome-stable_current_amd64.deb
 # Install Angular 18
 RUN npm install -g @angular/cli@18
 
-# Copy app to container and move to it
+##
+# If you want to run the tests locally
+##
+# Copy app folder to container and move to it
 ADD . /usr/src
 WORKDIR /usr/src/app
 
