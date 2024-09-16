@@ -3,7 +3,8 @@
 ## Structure
 * .github/workflows/test.yml: Workflow to run tests in app folder within the Docker container specified in ./dockerfile.
 * app: A basic Angular 18 app with tests that should pass.
-* dockerfile: Configuration for a Docker container that you can use on your local machine or put on [DockerHub](https://hub.docker.com/)
+* dockerfile: Configuration for a [Docker container](https://hub.docker.com/repository/docker/adammaus/run-angular18-karma-in-docker/general) that you can use on your local machine or put on [DockerHub](https://hub.docker.com/)
+* .gitlab-ci.yml: CI/CD script for Gitlab Pipline to run tests in app folder within the Docker container specified in ./dockerfile.
 
 ## To run tests on local machine
 
