@@ -1,0 +1,23 @@
+name: Run Karma Unit Tests
+
+on:
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container:
+      image: adammaus/run-angular18-karma-in-docker
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: cd app && npm install
+
+      - name: Run tests
+        run: cd app && ng test
