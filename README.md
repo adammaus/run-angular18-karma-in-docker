@@ -16,5 +16,6 @@
 3. Run Karma unit tests: `docker container run angular-docker ng test`
 
 ## Notes
+* Read more on my [blog post](https://adammaus.com/wp/2024/09/run-angular-18-karma-unit-tests-in-docker/).
 * This was only tested on a 2023 MacBook Pro with M2 chip.
 * If you make changes to the app or tests, you will need to rebuild the Docker container and rerun the tests. Here is the one liner: `docker build -t angular-docker .; docker container run angular-docker ng test`
